@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-slate-950 text-slate-100 min-h-screen selection:bg-primary-500 selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Ultra-Premium Glassmorphism */
+  .glass-panel {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50;
+  }
+  
+  .glass-card {
+    @apply bg-slate-900/50 backdrop-blur-lg border border-white/10 shadow-xl shadow-black/30 hover:border-primary-500/40 hover:bg-slate-900/70 transition-all duration-300;
+  }
+
+  .glass-card-glow {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-primary-500/30 shadow-xl shadow-primary-500/10 hover:shadow-primary-500/20 hover:border-primary-400/50 transition-all duration-300;
+  }
+
+  .glass-input {
+    @apply bg-slate-950/70 backdrop-blur-md border border-white/10 text-slate-100 placeholder-slate-500 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:outline-none transition-all;
+  }
+
+  /* Gradient Textures & Shimmers */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400;
+  }
+
+  .text-gradient-cyan {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-orange-300 to-rose-400;
+  }
+  
+  .bg-gradient-primary {
+    @apply bg-gradient-to-tr from-primary-600 via-indigo-600 to-purple-600;
+  }
+
+  .bg-gradient-dark {
+    @apply bg-gradient-to-b from-slate-900 via-slate-950 to-black;
+  }
+
+  /* Grid & Mesh Background */
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  }
+
+  .bg-dots-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .animate-delay-150 {
+    animation-delay: 150ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Custom Sleek Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
